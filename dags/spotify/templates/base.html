@@ -1,0 +1,1684 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="x-apple-disable-message-reformatting" />
+    <title>SpotiyBase</title>
+    <base target="_blank" />
+    <style>
+      html,
+      body,
+      div,
+      span,
+      applet,
+      object,
+      iframe,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      p,
+      blockquote,
+      pre,
+      a,
+      abbr,
+      acronym,
+      address,
+      big,
+      cite,
+      code,
+      del,
+      dfn,
+      em,
+      img,
+      ins,
+      kbd,
+      q,
+      s,
+      samp,
+      small,
+      strike,
+      strong,
+      sub,
+      sup,
+      tt,
+      var,
+      b,
+      u,
+      i,
+      center,
+      dl,
+      dt,
+      dd,
+      ol,
+      ul,
+      li,
+      fieldset,
+      form,
+      label,
+      legend,
+      table,
+      caption,
+      tbody,
+      tfoot,
+      thead,
+      tr,
+      th,
+      td,
+      article,
+      aside,
+      canvas,
+      details,
+      embed,
+      figure,
+      figcaption,
+      footer,
+      header,
+      hgroup,
+      menu,
+      nav,
+      output,
+      ruby,
+      section,
+      summary,
+      time,
+      mark,
+      audio,
+      video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+      }
+      article,
+      aside,
+      details,
+      figcaption,
+      figure,
+      footer,
+      header,
+      hgroup,
+      menu,
+      nav,
+      section {
+        display: block;
+      }
+      body {
+        line-height: 1;
+      }
+      ol,
+      ul {
+        list-style: none;
+      }
+      blockquote,
+      q {
+        quotes: none;
+      }
+      table {
+        border-collapse: collapse;
+        border-spacing: 0;
+      }
+    </style>
+    <style type="text/css">
+      @media yahoo {
+        .hide_yahoo {
+          display: none !important;
+        }
+        .appl_sq_caption_padding_yahoo {
+          padding-top: 65px !important;
+        }
+      }
+      .appl_mso_button {
+        display: inline-block !important;
+        color: #ffffff !important;
+        background-color: #fa233b !important;
+        border: 1px solid transparent;
+        padding: 0 26px !important;
+        line-height: 2.2 !important;
+        font-size: 14px !important;
+        text-transform: inherit;
+        font-weight: 700 !important;
+      }
+      body {
+        background-color: #ffffff;
+        color: #000000;
+        -webkit-font-smoothing: antialiased;
+        font-family: system, -apple-system, BlinkMacSystemFont,
+          -webkit-system-font, "Helvetica Neue", Helvetica, Arial, sans-serif;
+      }
+      a {
+        color: #000000;
+        text-decoration: none;
+      }
+      .appl_body_substitution {
+        background-color: #ffffff;
+        margin: 0 auto;
+        box-sizing: border-box;
+        font-family: system, -apple-system, BlinkMacSystemFont,
+          -webkit-system-font, "Helvetica Neue", Helvetica, Arial, sans-serif;
+      }
+      .appl_page_header {
+        padding: 0 0 26px;
+        line-height: 1.3;
+      }
+      .appl_page_header h1 {
+        font-size: 42px;
+        font-weight: 700;
+        line-height: 1.1;
+      }
+      .appl_squareGenreHero {
+        background-color: #f8f8f8;
+        border-radius: 8px;
+        margin-bottom: 25px;
+        width: 100%;
+      }
+      .appl_sqHero_figure,
+      .appl_sqHero_caption {
+        display: inline-block;
+      }
+      .appl_sqHero_caption.appl_large {
+        padding: 30px 0 0;
+      }
+      .appl_sqAttr a {
+        color: #8c8c8c;
+      }
+      .appl_sqHero_figure {
+        padding: 26px;
+      }
+      .appl_sqBadge {
+        font-size: 10px;
+        text-transform: uppercase;
+        letter-spacing: 0.6px;
+        color: #fa233b;
+        font-weight: 500;
+        line-height: 2;
+        margin: 0 0 5px;
+        padding: 0;
+      }
+      .appl_sqAttr.appl_large {
+        font-size: 18px;
+      }
+      .appl_sqMedia,
+      .appl_sqAttr {
+        margin: 0;
+        padding: 0;
+      }
+      .appl_sqMedia a,
+      .appl_sqAttr a,
+      .appl_cta a {
+        border-bottom: 1px solid transparent;
+        transition: all 0.2s ease;
+      }
+      .appl_mo_caption_album,
+      .appl_mo_caption_artist {
+        text-decoration: none;
+        transition: all 0.2s ease;
+      }
+      .appl_sqMedia a:hover,
+      .appl_sqAttr a:hover,
+      .appl_cta a:hover {
+        text-decoration: none !important;
+        border-bottom: 1px solid !important;
+      }
+      .appl_mo_caption_album:hover,
+      .appl_mo_caption_artist:hover {
+        text-decoration: underline !important;
+      }
+      .appl_sqAttr {
+        font-size: 24px;
+        color: #8c8c8c;
+        line-height: 1.2;
+      }
+      .appl_sqMedia,
+      .appl_sqAttr {
+        font-size: 24px;
+        line-height: 1.2;
+      }
+      .appl_sqCta {
+        font-size: 15px;
+        color: #fa233b;
+        margin-top: 10px;
+      }
+      .appl_sqShortDescription {
+        font-size: 15px;
+        line-height: 1.4;
+        margin: 10px 0;
+        color: #8c8c8c;
+      }
+      .appl_sqHero_figure img.appl_static {
+        border-radius: 8px;
+        border: 1px solid #e5e5e5;
+        max-width: 276px;
+      }
+      img.appl_video {
+        width: auto;
+        height: auto;
+        max-width: 350px !important;
+      }
+      .appl_truncate_media_caption {
+        width: 144px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: block;
+      }
+      .appl_body_cta {
+        font-size: 22px;
+        line-height: 1;
+        color: #fa233b;
+        border-radius: 4px;
+        display: inline-block;
+        padding: 6px 20px;
+        margin: 20px 0 50px;
+        white-space: nowrap;
+        font-weight: 400;
+      }
+      .appl_body_cta_arrow {
+        font-size: 48px;
+        line-height: 16px;
+        float: right;
+        margin-left: 5px;
+        font-weight: 300;
+      }
+      p.appl_sqShortDescription a {
+        color: #000000;
+      }
+      .appl_hero_module a:hover {
+        text-decoration: none;
+      }
+      .appl_genre-hero-caption {
+        line-height: 1.1 !important;
+        text-decoration: none !important;
+        margin: 20px 0 30px !important;
+      }
+      .appl_category_header a {
+        color: #000000;
+        text-decoration: none;
+      }
+      .appl_category_header h2 {
+        margin-top: 0;
+        margin-bottom: 7px;
+        color: #000000;
+        font-size: 26px;
+        line-height: 1;
+        font-weight: 600;
+      }
+      .appl_header img {
+        display: block;
+        margin: 0;
+        border: 0;
+      }
+      .appl_genre-hero-caption {
+        padding: 20px 0 30px;
+      }
+      .appl_genre-hero-caption h3,
+      .appl_genre-hero-caption p {
+        margin-top: 0;
+        text-decoration: none;
+      }
+      .appl_genre-hero-caption h3 {
+        margin-bottom: 3px;
+        font-size: 14px;
+        color: #000000;
+        font-weight: 400;
+      }
+      .appl_genre-hero-caption p {
+        margin-bottom: 7px;
+        font-size: 14px;
+        line-height: 1.1;
+        color: #8c8c8c;
+      }
+      .appl_genre-hero-caption p + p {
+        color: #fa233b;
+        font-size: 15px;
+      }
+      .appl_genre-hero-caption p.appl_genre_cta {
+        margin-top: 15px;
+        font-weight: 500;
+      }
+      .appl_category_header {
+        padding-bottom: 19px;
+      }
+      .appl_mo_caption_artist {
+        width: 144px;
+        color: #000000;
+      }
+      .appl_mo_caption_album {
+        text-decoration: none;
+        width: 144px;
+        color: #8c8c8c;
+      }
+      .appl_album .appl_sqAttr a {
+        margin: 3px 0 7px;
+        display: inline;
+      }
+      .appl_cta,
+      .appl_sqCta.appl_cta {
+        margin: 3px 0;
+        color: #fa233b;
+        font-size: 15px;
+        line-height: 1;
+        font-weight: 500;
+        text-decoration: none;
+      }
+      .appl_cta a {
+        color: #fa233b;
+        text-decoration: none;
+        width: 144px;
+      }
+      .appl_cta .appl_icn img {
+        width: auto;
+        margin-bottom: 0;
+        display: inline-block;
+        height: 8px;
+      }
+      .appl_cta span {
+        margin-left: 3px;
+      }
+      .appl_btn_primary_genre {
+        text-align: left;
+      }
+      .appl_btn_genre {
+        margin: 20px 0 55px 0;
+      }
+      .apple_footer_wrapper {
+        background: #f2f2f2;
+        width: 100%;
+      }
+      .footer-minimal {
+        width: 100%;
+        color: #7f7f7f;
+        background-color: #f2f2f2;
+      }
+      .appl_mailsettings,
+      .appl_terms {
+        color: #535353;
+      }
+      .appl_media_wrap img {
+        height: 153px;
+        width: 153px;
+      }
+      .appl_last_album {
+        padding-right: 0;
+      }
+      .appl_header_copy {
+        color: #000000;
+      }
+      .appl_leaderboard_banner {
+        margin: 0 auto 40px;
+      }
+      .appl_leaderboard_banner img {
+        max-width: 100%;
+        height: auto;
+      }
+      .appl_bdy_bgcolor {
+        background-color: #ffffff;
+      }
+      .appl_banner_desktop_hide {
+        max-width: 640px !important;
+        width: 100% !important;
+        height: auto !important;
+      }
+      .appl_footer {
+        width: 100%;
+        color: #9b9b9b;
+        background-color: #f2f2f2;
+        line-height: 1.5;
+        font-size: 12px;
+        margin-top: 35px;
+      }
+      .appl_footer_inner,
+      .appl_footer_logo_wrap {
+        margin: 0 auto 35px;
+        max-width: 638px;
+      }
+      .appl_mailsettings,
+      .appl_terms {
+        color: #535353;
+      }
+      .appl_footer_logo {
+        height: 28px;
+        width: auto;
+      }
+      .appl_foooter_links {
+        margin: 0 0 30px;
+        clear: both;
+      }
+      .appl_mailsettings {
+        padding: 20px 0 60px;
+      }
+      .appl_terms {
+        padding-top: 5px;
+        margin-bottom: 30px;
+      }
+      .appl_footer_container {
+        padding: 35px 20px 0;
+      }
+      .appl_terms li {
+        border-left: 1px solid #535353;
+        padding: 0 10px 0;
+        display: inline-block;
+      }
+      .appl_terms li:first-child {
+        border-left: none;
+        padding: 0 10px 0 0;
+      }
+      .appl_legalAttribution {
+        padding: 30px 0 0;
+        display: inline-block;
+      }
+      .appl_social_footer {
+        float: right;
+        display: inline-block;
+        vertical-align: top;
+        width: auto;
+      }
+      .appl_truncate_media_caption:hover {
+        text-decoration: underline !important;
+      }
+      .appl_sqAttr {
+        margin: 5px 0 10px;
+      }
+    </style>
+    <style type="text/css">
+      @media only screen and (max-device-width: 768px) {
+        a {
+          color: inherit;
+        }
+        * {
+          text-rendering: optimizelegibility;
+        }
+      }
+      /* this is used to add padding. works on all desktop versions except gmail web and owa */
+      @media (min-width: 480px) {
+        .appl_need_padd {
+          display: block !important;
+        }
+      }
+      @media only screen and (max-width: 480px) {
+        body {
+          font-size: 10px !important;
+        }
+        .appl_mobile_padd {
+          margin-left: 30px !important;
+        }
+        .appl_header_subhead {
+          line-height: 1.2 !important;
+          font-size: 32px !important;
+        }
+        .appl_hero_live {
+          width: 100% !important;
+        }
+        .appl_hero_module {
+          margin-bottom: 10px !important;
+        }
+        .appl_music_logo {
+          padding: 10px 0 3px 0 !important;
+        }
+        .appl_music_logo img {
+          height: 18px !important;
+          margin: 20px 0 15px !important;
+        }
+        .appl_its_logo {
+          vertical-align: bottom !important;
+          padding-bottom: 30px !important;
+        }
+        .appl_its_logo img {
+          height: 73px !important;
+          padding: 0 30px 0 38px !important;
+        }
+        .appl_page_header {
+          padding: 0 !important;
+        }
+        .appl_page_header h1 {
+          font-size: 32px !important;
+          margin-bottom: 5px !important;
+          font-weight: 700 !important;
+        }
+        .appl_page_header p {
+          font-size: 32px !important;
+          line-height: 1.2 !important;
+          max-width: 100% !important;
+          margin-bottom: 30px !important;
+        }
+        .appl_media_wrap {
+          width: 100% !important;
+        }
+        .appl_sqHero_caption {
+          width: auto !important;
+          padding: 5px 30px 0 !important;
+          margin: 0 !important;
+        }
+        .appl_sqHero_figure {
+          padding: 30px 30px 15px !important;
+        }
+        .appl_sqHero_figure img {
+          max-width: 100% !important;
+          width: 100% !important;
+          height: auto !important;
+        }
+        .appl_sqBadge {
+          margin: 0 !important;
+        }
+        .appl_category_header {
+          padding-bottom: 12px !important;
+        }
+        .appl_sqMedia,
+        .appl_sqAttr {
+          font-size: 26px !important;
+          line-height: 1 !important;
+        }
+        .appl_heroCaptionMobileSmallFont a {
+          font-size: 26px !important;
+        }
+        .appl_sqShortDescription {
+          line-height: 1.4 !important;
+          margin: 4px 0 0 !important;
+        }
+        .appl_cta,
+        .appl_sqCta.appl_cta {
+          margin-top: 5px !important;
+        }
+        .appl_hideKeyline {
+          background-color: transparent !important;
+        }
+        .appl_terms,
+        .appl_legalAttribution {
+          margin-left: 10px !important;
+        }
+        .appl_copyright {
+          max-width: 290px;
+        }
+        .appl_btn_primary_genre {
+          text-align: center !important;
+        }
+        .appl_bdy_bgcolor {
+          background-color: #ffffff !important;
+          padding: 0 20px !important;
+        }
+        .appl_sq_caption {
+          padding: 0 0 30px 30px !important;
+        }
+        .appl_100 {
+          width: 100% !important;
+        }
+        .appl_min0 {
+          min-width: 0% !important;
+        }
+        .appl_banner_desktop_hide {
+          overflow: hidden !important;
+          float: none !important;
+          display: none !important;
+          line-height: 0 !important;
+        }
+        .appl_banner_mobile_expose {
+          display: block !important;
+        }
+        .appl_squareGenreHero {
+          width: 100% !important;
+        }
+        .appl_footer_container {
+          padding: 35px 10px 20px 10px !important;
+        }
+        .appl_media_wrap img {
+          height: auto;
+        }
+      }
+      /* 6 */
+      @media only screen and (max-width: 400px) {
+        .appl_2up p,
+        .appl_2up h3,
+        .appl_1up h3,
+        .appl_1up h3 + p {
+          font-size: 14px;
+          line-height: 1.2em;
+          margin-bottom: 0px;
+        }
+        .appl_2up p ~ p,
+        .appl_1up p ~ p {
+          font-size: 12px;
+          margin-top: 5px;
+        }
+        a.appl_truncate_media_caption {
+          width: 155px;
+        }
+      }
+      /* iphone 5  */
+      @media only screen and (max-width: 320px) {
+        .appl_2up p,
+        .appl_2up h3,
+        .appl_1up h3,
+        .appl_1up h3 + p {
+          font-size: 12px;
+          line-height: 1.2em;
+          margin-bottom: 0px;
+        }
+        .appl_2up p ~ p,
+        .appl_1up p ~ p {
+          font-size: 10px;
+          margin-top: 5px;
+        }
+        .appl_2up {
+          padding-right: 10px;
+        }
+        .appl_2up:last-child {
+          padding-right: 0;
+        }
+        .appl_truncate_media_caption {
+          width: 142px;
+        }
+        .appl_category_header h2 {
+          font-size: 18px;
+        }
+        .appl_footer {
+          width: 100%;
+        }
+        .appl_bdy_bgcolor {
+          padding: 0;
+        }
+        .appl_footer_container {
+          padding: 35px 10px 20px 10px !important;
+        }
+      }
+    </style>
+
+    <!--[if gte mso 9]>
+      <style type="text/css">
+        .appl_media_wrap {
+          width: 295px !important;
+        }
+        .appl_foooter_links {
+          margin: 0 10px 20px !important;
+        }
+        .appl_truncate_media_caption {
+          white-space: normal !important;
+        }
+        .appl_social_footer {
+          margin: 30px 0 !important;
+        }
+      </style>
+    <![endif]-->
+  </head>
+  <body
+    rightmargin="0"
+    leftmargin="0"
+    bgcolor="#FFFFFF"
+    style="margin: 0; padding: 0"
+  >
+    <div
+      class="appl_client_preview"
+      style="
+        display: none;
+        max-height: 0;
+        max-width: 0;
+        width: 0;
+        height: 0;
+        overflow: hidden;
+        font-size: 1px;
+      "
+    >
+      <span>Hear the best new releases chosen every week by our editors.</span>
+    </div>
+    <table
+      cellspacing="0"
+      cellpadding="0"
+      border="0"
+      align="center"
+      style="margin: 0 auto"
+      class="appl_body appl_body_substitution appl_100"
+    >
+      <tr>
+        <td bgcolor="#FFFFFF" align="center" class="appl_bdy_bgcolor appl_min0">
+          <table
+            cellspacing="0"
+            cellpadding="0"
+            border="0"
+            class="appl_hero appl_hero_module appl_100"
+            style="margin-bottom: 24px"
+          >
+            <tr>
+              <td align="left">
+                <table
+                  cellspacing="0"
+                  cellpadding="0"
+                  border="0"
+                  class="appl_100"
+                  style="width: 638px; background-color: #ffffff"
+                >
+                  <tr>
+                    <td
+                      class="appl_music_logo"
+                      style="font-size: 26px; padding: 40px 0 20px 0"
+                    >
+                      <img
+                        height="19"
+                        alt="Noiist"
+                        style="height: 36px; width: auto"
+                        src="https://ik.imagekit.io/79uno1psenlz/noiisst_G7zC19MKz.png"
+                      />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="appl_page_header">
+                      <h1
+                        style="
+                          margin: 0;
+                          font-size: 42px;
+                          font-weight: 700;
+                          line-height: 1.1;
+                        "
+                      >
+                        Hey, {{ ctx.name }}
+                      </h1>
+                      <p
+                        class="appl_owa_subhead"
+                        style="margin: 0; max-width: 410px"
+                      >
+                        <a
+                          class="appl_header_subhead"
+                          style="
+                            text-decoration: none;
+                            font-size: 38px;
+                            font-weight: 400;
+                            color: #8c8c8c;
+                            margin-top: 3px;
+                            line-height: 1.2;
+                          "
+                          >Here’s your selection of the hottest music.</a
+                        >
+                      </p>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+          <table
+            cellspacing="0"
+            cellpadding="0"
+            border="0"
+            width="638"
+            style="border-top: none"
+            class="appl_100 appl_genre"
+          >
+            <tr>
+              <td>
+                <table
+                  width="100%"
+                  cellspacing="0"
+                  cellpadding="0"
+                  border="0"
+                  class="appl_category_header"
+                >
+                  <tr>
+                    <td
+                      align="left"
+                      class="appl_category_header"
+                      style="padding-top: 0"
+                    >
+                      <h2
+                        style="
+                          margin-top: 0;
+                          margin-bottom: 7px;
+                          font-size: 26px;
+                          line-height: 1;
+                          font-weight: 600;
+                        "
+                      >
+                        <a style="color: #000000; text-decoration: none"
+                          >New in Pop</a
+                        >
+                      </h2>
+                    </td>
+                  </tr>
+                </table>
+                <table
+                  cellspacing="0"
+                  cellpadding="0"
+                  border="0"
+                  class="appl_squareGenreHero"
+                  style="
+                    background-color: #f8f8f8;
+                    border-radius: 8px;
+                    margin-bottom: 25px;
+                    width: 638px;
+                  "
+                >
+                  <tr>
+                    <td>
+                      <table
+                        cellspacing="0"
+                        cellpadding="0"
+                        border="0"
+                        align="left"
+                        class="appl_sqHero_figure"
+                        style="
+                          padding: 26px 0 26px 26px;
+                          border-collapse: separate;
+                        "
+                      >
+                        <tr>
+                          <td>
+                            <a
+                              href="https://open.spotify.com/track/{{ ctx['hero'][0]['spotify_link'] }}"
+                            >
+                              <img
+                                class="appl_100 appl_video"
+                                src="{{ctx['hero'][0]['img_url']}}"
+                                title="{{ctx['hero'][0]['title']}}"
+                                height="auto"
+                                width="276"
+                                style="
+                                  border-radius: 8px;
+                                  height: auto;
+                                  border: 1px solid #e5e5e5;
+                                "
+                                alt="{{ctx['hero'][0]['title']}}"
+                              />
+                            </a>
+                          </td>
+                        </tr>
+                      </table>
+                      <table
+                        cellspacing="0"
+                        cellpadding="0"
+                        border="0"
+                        align="left"
+                        style="
+                          display: inline-block;
+                          width: 40%;
+                          border-collapse: separate;
+                        "
+                        class="appl_100 appl_small"
+                      >
+                        <tr>
+                          <td
+                            class="appl_need_padd"
+                            style="padding-top: 40px; display: none"
+                          >
+                            &nbsp;
+                          </td>
+                          <td
+                            class="appl_sq_caption"
+                            style="max-width: 250px; padding: 30px"
+                          >
+                            <p
+                              class="appl_sqBadge"
+                              style="
+                                font-size: 10px;
+                                text-transform: uppercase;
+                                letter-spacing: 0.6px;
+                                color: #fa233b;
+                                font-weight: 500;
+                                line-height: 2;
+                                margin: 0 0 5px;
+                                padding: 0;
+                              "
+                            >
+                              Top Recommendation
+                            </p>
+                            <p
+                              class="
+                                appl_sqMedia appl_heroCaptionMobileSmallFont
+                              "
+                              style="margin: 0"
+                            >
+                              <a
+                                style="
+                                  text-decoration: none;
+                                  font-size: 24px;
+                                  color: #000000;
+                                "
+                                href="https://open.spotify.com/track/{{ ctx['hero'][0]['spotify_link'] }}"
+                              >
+                                {{ctx['hero'][0]['title']}}
+                              </a>
+                            </p>
+                            <div
+                              class="appl_sqAttr appl_small"
+                              style="line-height: 1.4"
+                            >
+                              <p
+                                class="appl_sqShortDescription"
+                                style="
+                                  font-size: 15px;
+                                  line-height: 1.4;
+                                  margin: 10px 0;
+                                  color: #8c8c8c;
+                                "
+                              >
+                                {{ctx['hero'][0]['artist']}}
+                              </p>
+                            </div>
+                            <p class="appl_sqCta appl_cta">
+                              <a
+                                href="https://open.spotify.com/track/{{ ctx['hero'][0]['spotify_link'] }}"
+                                style="
+                                  color: #fa233b;
+                                  text-decoration: none;
+                                  font-size: 15px;
+                                  line-height: 1;
+                                  font-weight: 500;
+                                  display: inline;
+                                "
+                              >
+                                Listen now
+                                <span class="appl_icn appl_chevron_rt">
+                                  <img
+                                    height="8"
+                                    class="appl_chevron_rt"
+                                    style="
+                                      height: 8px;
+                                      width: auto;
+                                      max-height: 8px;
+                                    "
+                                    src="http://static-its-images.apple.com/images/applemusic/rt-arrow-fd3159.png"
+                                    alt=""
+                                  />
+                                </span>
+                              </a>
+                            </p>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+
+    {% for i in range(0, 16, 4) %}
+
+    <table
+      cellspacing="0"
+      cellpadding="0"
+      border="0"
+      align="center"
+      style="margin: 0 auto"
+      class="appl_body appl_body_substitution appl_100"
+    >
+      <tr>
+        <td bgcolor="#FFFFFF" align="center" class="appl_bdy_bgcolor appl_min0">
+          <table
+            cellspacing="0"
+            cellpadding="0"
+            border="0"
+            width="638"
+            style="border-top: none"
+            class="appl_100 appl_genre"
+          >
+            <tr>
+              <td>
+                <table
+                  cellspacing="0"
+                  cellpadding="0"
+                  border="0"
+                  align="left"
+                  class="appl_100 appl_media_wrap"
+                >
+                  <tr>
+                    <td style="vertical-align: top" class="appl_2up">
+                      <table
+                        width="100%"
+                        cellspacing="0"
+                        cellpadding="0"
+                        border="0"
+                        align="center"
+                        class="appl_media_object appl_mo_above"
+                      >
+                        <tr>
+                          <td style="max-width: 152px">
+                            <a
+                              href="https://open.spotify.com/track/{{ ctx['cards'][i]['spotify_link'] }}"
+                              class="appl_play"
+                              target="_blank"
+                            >
+                              <img
+                                class="appl_100 appl_album_media"
+                                src="{{ ctx['cards'][i]['img_url'] }}"
+                                title="{{ ctx['cards'][i]['title'] }}"
+                                width="153"
+                                height="153"
+                                style="
+                                  border-radius: 4px;
+                                  display: block;
+                                  margin: 0;
+                                "
+                                alt="{{ ctx['cards'][i]['title'] }}"
+                              />
+
+                              <!--<![endif]-->
+                            </a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <table width="148;">
+                              <tr>
+                                <td
+                                  valign="top"
+                                  align="left"
+                                  class="appl_1up"
+                                  width="143"
+                                >
+                                  <h3 style="margin: 5px 0 0; line-height: 1.2">
+                                    <a
+                                      style="
+                                        font-size: 14px;
+                                        text-decoration: none;
+                                        color: #000000;
+                                        line-height: 1.2;
+                                        white-space: nowrap;
+                                        overflow: hidden;
+                                        text-overflow: ellipsis;
+                                        display: block;
+                                        font-weight: 400;
+                                      "
+                                      class="
+                                        appl_truncate_media_caption
+                                        appl_mo_caption_artist
+                                      "
+                                      href="https://open.spotify.com/track/{{ ctx['cards'][i]['spotify_link'] }}"
+                                      title="{{ ctx['cards'][i]['title'] }}"
+                                    >
+                                      {{ ctx['cards'][i]['title'].capitalize()
+                                      }}
+                                    </a>
+                                  </h3>
+                                  <p style="margin: 5px 0 0; line-height: 1.2">
+                                    <a
+                                      style="
+                                        font-size: 14px;
+                                        text-decoration: none;
+                                        color: #8c8c8c;
+                                        line-height: 1.2;
+                                        white-space: nowrap;
+                                        overflow: hidden;
+                                        text-overflow: ellipsis;
+                                        display: block;
+                                      "
+                                      href="https://open.spotify.com/track/{{ ctx['cards'][i]['spotify_link'] }}"
+                                      class="
+                                        appl_truncate_media_caption
+                                        appl_mo_caption_album
+                                      "
+                                      title="{{ctx['cards'][i]['artist']}}"
+                                    >
+                                      {{ ctx['cards'][i]['artist'] }}
+                                    </a>
+                                  </p>
+                                  <p
+                                    style="margin: 5px 0 20px; line-height: 1.3"
+                                    class="appl_cta"
+                                  >
+                                    <a
+                                      style="
+                                        text-decoration: none;
+                                        color: #fa233b;
+                                        line-height: 1.3;
+                                      "
+                                      href="https://open.spotify.com/track/{{ ctx['cards'][i]['spotify_link'] }}"
+                                    >
+                                      Listen now
+                                      <span class="appl_icn appl_chevron_rt">
+                                        <img
+                                          height="8"
+                                          class="appl_chevron_rt"
+                                          style="
+                                            height: 8px;
+                                            width: auto;
+                                            max-height: 8px;
+                                          "
+                                          src="https://open.spotify.com/track/{{ ctx['cards'][i]['spotify_link'] }}"
+                                          alt=""
+                                        />
+                                      </span>
+                                    </a>
+                                  </p>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+
+                    <!--[if gte mso 9
+                      ]><td style="width: 5px">&nbsp;</td><!
+                    [endif]-->
+                    <td class="appl_mo_spacing" style="width: 10px">
+                      <img
+                        src="http://static-its-images.apple.com/images/pixel.png"
+                        width="10"
+                        style="width: 10px"
+                      />
+                    </td>
+                    <td
+                      style="vertical-align: top"
+                      class="appl_2up appl_last_album"
+                    >
+                      <table
+                        width="100%"
+                        cellspacing="0"
+                        cellpadding="0"
+                        border="0"
+                        align="center"
+                        class="appl_media_object appl_mo_above"
+                      >
+                        <tr>
+                          <td style="max-width: 152px">
+                            <a
+                              href="https://open.spotify.com/track/{{ ctx['cards'][i+1]['spotify_link'] }}"
+                              class="appl_play"
+                              target="_blank"
+                            >
+                              <img
+                                class="appl_100 appl_album_media"
+                                src="{{ ctx['cards'][i+1]['img_url'] }}"
+                                title="{{ ctx['cards'][i+1]['title'] }}"
+                                width="153"
+                                height="153"
+                                style="
+                                  border-radius: 4px;
+                                  display: block;
+                                  margin: 0;
+                                "
+                                alt="{{ ctx['cards'][i+1]['title'] }}"
+                              />
+
+                              <!--<![endif]-->
+                            </a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <table width="148;">
+                              <tr>
+                                <td
+                                  valign="top"
+                                  align="left"
+                                  class="appl_1up"
+                                  width="143"
+                                >
+                                  <h3 style="margin: 5px 0 0; line-height: 1.2">
+                                    <a
+                                      style="
+                                        font-size: 14px;
+                                        text-decoration: none;
+                                        color: #000000;
+                                        line-height: 1.2;
+                                        white-space: nowrap;
+                                        overflow: hidden;
+                                        text-overflow: ellipsis;
+                                        display: block;
+                                        font-weight: 400;
+                                      "
+                                      class="
+                                        appl_truncate_media_caption
+                                        appl_mo_caption_artist
+                                      "
+                                      href="https://open.spotify.com/track/{{ ctx['cards'][i+1]['spotify_link'] }}"
+                                      title="{{ ctx['cards'][i+1]['title'] }}"
+                                    >
+                                      {{ ctx['cards'][i+1]['title'].capitalize()
+                                      }}
+                                    </a>
+                                  </h3>
+                                  <p style="margin: 5px 0 0; line-height: 1.2">
+                                    <a
+                                      style="
+                                        font-size: 14px;
+                                        text-decoration: none;
+                                        color: #8c8c8c;
+                                        line-height: 1.2;
+                                        white-space: nowrap;
+                                        overflow: hidden;
+                                        text-overflow: ellipsis;
+                                        display: block;
+                                      "
+                                      href="https://open.spotify.com/track/{{ ctx['cards'][i+1]['spotify_link'] }}"
+                                      class="
+                                        appl_truncate_media_caption
+                                        appl_mo_caption_album
+                                      "
+                                      title="{{ctx['cards'][i+1]['artist']}}"
+                                    >
+                                      {{ ctx['cards'][i+1]['artist'] }}
+                                    </a>
+                                  </p>
+                                  <p
+                                    style="margin: 5px 0 20px; line-height: 1.3"
+                                    class="appl_cta"
+                                  >
+                                    <a
+                                      style="
+                                        text-decoration: none;
+                                        color: #fa233b;
+                                        line-height: 1.3;
+                                      "
+                                      href="https://open.spotify.com/track/{{ ctx['cards'][i+1]['spotify_link'] }}"
+                                    >
+                                      Listen now
+                                      <span class="appl_icn appl_chevron_rt">
+                                        <img
+                                          height="8"
+                                          class="appl_chevron_rt"
+                                          style="
+                                            height: 8px;
+                                            width: auto;
+                                            max-height: 8px;
+                                          "
+                                          src="https://open.spotify.com/track/{{ ctx['cards'][i+1]['spotify_link'] }}"
+                                          alt=""
+                                        />
+                                      </span>
+                                    </a>
+                                  </p>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+                <table
+                  cellspacing="0"
+                  cellpadding="0"
+                  border="0"
+                  align="right"
+                  class="appl_100 appl_media_wrap"
+                >
+                  <tr>
+                    <td style="vertical-align: top" class="appl_2up">
+                      <table
+                        width="100%"
+                        cellspacing="0"
+                        cellpadding="0"
+                        border="0"
+                        align="center"
+                        class="appl_media_object appl_mo_above"
+                      >
+                        <tr>
+                          <td style="max-width: 152px">
+                            <a
+                              href="https://open.spotify.com/track/{{ ctx['cards'][i+2]['spotify_link'] }}"
+                              class="appl_play"
+                              target="_blank"
+                            >
+                              <img
+                                class="appl_100 appl_album_media"
+                                src="{{ ctx['cards'][i+2]['img_url'] }}"
+                                title="{{ ctx['cards'][i+2]['title'] }}"
+                                width="153"
+                                height="153"
+                                style="
+                                  border-radius: 4px;
+                                  display: block;
+                                  margin: 0;
+                                "
+                                alt="{{ ctx['cards'][i+2]['title'] }}"
+                              />
+                            </a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <table width="148;">
+                              <tr>
+                                <td
+                                  valign="top"
+                                  align="left"
+                                  class="appl_1up"
+                                  width="143"
+                                >
+                                  <h3 style="margin: 5px 0 0; line-height: 1.2">
+                                    <a
+                                      style="
+                                        font-size: 14px;
+                                        text-decoration: none;
+                                        color: #000000;
+                                        line-height: 1.2;
+                                        white-space: nowrap;
+                                        overflow: hidden;
+                                        text-overflow: ellipsis;
+                                        display: block;
+                                        font-weight: 400;
+                                      "
+                                      class="
+                                        appl_truncate_media_caption
+                                        appl_mo_caption_artist
+                                      "
+                                      href="https://open.spotify.com/track/{{ ctx['cards'][i+2]['spotify_link'] }}"
+                                      title="{{ ctx['cards'][i+2]['title'] }}"
+                                    >
+                                      {{ ctx['cards'][i+2]['title'] }}
+                                    </a>
+                                  </h3>
+                                  <p style="margin: 5px 0 0; line-height: 1.2">
+                                    <a
+                                      style="
+                                        font-size: 14px;
+                                        text-decoration: none;
+                                        color: #8c8c8c;
+                                        line-height: 1.2;
+                                        white-space: nowrap;
+                                        overflow: hidden;
+                                        text-overflow: ellipsis;
+                                        display: block;
+                                      "
+                                      href="https://open.spotify.com/track/{{ ctx['cards'][i+2]['spotify_link'] }}"
+                                      class="
+                                        appl_truncate_media_caption
+                                        appl_mo_caption_album
+                                      "
+                                      title="{{ ctx['cards'][i+2]['artist'] }}"
+                                    >
+                                      {{ ctx['cards'][i+2]['artist'] }}
+                                    </a>
+                                  </p>
+                                  <p
+                                    style="margin: 5px 0 20px; line-height: 1.3"
+                                    class="appl_cta"
+                                  >
+                                    <a
+                                      style="
+                                        text-decoration: none;
+                                        color: #fa233b;
+                                        line-height: 1.3;
+                                      "
+                                      href="https://open.spotify.com/track/{{ ctx['cards'][i+2]['spotify_link'] }}"
+                                    >
+                                      Listen now
+                                      <span class="appl_icn appl_chevron_rt">
+                                        <img
+                                          height="8"
+                                          class="appl_chevron_rt"
+                                          style="
+                                            height: 8px;
+                                            width: auto;
+                                            max-height: 8px;
+                                          "
+                                          src="https://open.spotify.com/track/{{ ctx['cards'][i+2]['spotify_link'] }}"
+                                          alt=""
+                                        />
+                                      </span>
+                                    </a>
+                                  </p>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+
+                    <td class="appl_mo_spacing" style="width: 10px">
+                      <img
+                        src="http://static-its-images.apple.com/images/pixel.png"
+                        width="10"
+                        style="width: 10px"
+                      />
+                    </td>
+                    <td
+                      style="vertical-align: top"
+                      class="appl_2up appl_last_album"
+                    >
+                      <table
+                        width="100%"
+                        cellspacing="0"
+                        cellpadding="0"
+                        border="0"
+                        align="center"
+                        class="appl_media_object appl_mo_above"
+                      >
+                        <tr>
+                          <td style="max-width: 152px">
+                            <a
+                              href="https://open.spotify.com/track/{{ ctx['cards'][i+3]['spotify_link'] }}"
+                              class="appl_play"
+                            >
+                              <img
+                                class="appl_100 appl_album_media"
+                                src="{{ ctx['cards'][i+3]['img_url'] }}"
+                                title="{{ ctx['cards'][i+3]['title'] }}"
+                                width="153"
+                                height="153"
+                                style="
+                                  border-radius: 4px;
+                                  display: block;
+                                  margin: 0;
+                                "
+                                alt="{{ ctx['cards'][i+3]['title'] }}"
+                              />
+
+                              <!--<![endif]-->
+                            </a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <table width="148;">
+                              <tr>
+                                <td
+                                  valign="top"
+                                  align="left"
+                                  class="appl_1up"
+                                  width="143"
+                                >
+                                  <h3 style="margin: 5px 0 0; line-height: 1.2">
+                                    <a
+                                      style="
+                                        font-size: 14px;
+                                        text-decoration: none;
+                                        color: #000000;
+                                        line-height: 1.2;
+                                        white-space: nowrap;
+                                        overflow: hidden;
+                                        text-overflow: ellipsis;
+                                        display: block;
+                                        font-weight: 400;
+                                      "
+                                      class="
+                                        appl_truncate_media_caption
+                                        appl_mo_caption_artist
+                                      "
+                                      href="https://open.spotify.com/track/{{ ctx['cards'][i+3]['spotify_link'] }}"
+                                      title="{{ ctx['cards'][i+3]['title'] }}"
+                                    >
+                                      {{ ctx['cards'][i+3]['title'] }}
+                                    </a>
+                                  </h3>
+                                  <p style="margin: 5px 0 0; line-height: 1.2">
+                                    <a
+                                      style="
+                                        font-size: 14px;
+                                        text-decoration: none;
+                                        color: #8c8c8c;
+                                        line-height: 1.2;
+                                        white-space: nowrap;
+                                        overflow: hidden;
+                                        text-overflow: ellipsis;
+                                        display: block;
+                                      "
+                                      href="https://open.spotify.com/track/{{ ctx['cards'][i+3]['spotify_link'] }}"
+                                      class="
+                                        appl_truncate_media_caption
+                                        appl_mo_caption_album
+                                      "
+                                      title="{{ctx['cards'][i+3]['artist']}}"
+                                    >
+                                      {{ ctx['cards'][i+3]['artist'] }}
+                                    </a>
+                                  </p>
+                                  <p
+                                    style="margin: 5px 0 20px; line-height: 1.3"
+                                    class="appl_cta"
+                                  >
+                                    <a
+                                      style="
+                                        text-decoration: none;
+                                        color: #fa233b;
+                                        line-height: 1.3;
+                                      "
+                                      href="https://open.spotify.com/track/{{ ctx['cards'][i+3]['spotify_link'] }}"
+                                    >
+                                      Listen now
+                                      <span class="appl_icn appl_chevron_rt">
+                                        <img
+                                          height="8"
+                                          class="appl_chevron_rt"
+                                          style="
+                                            height: 8px;
+                                            width: auto;
+                                            max-height: 8px;
+                                          "
+                                          src="https://open.spotify.com/track/{{ ctx['cards'][i+3]['spotify_link'] }}"
+                                          alt=""
+                                        />
+                                      </span>
+                                    </a>
+                                  </p>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+
+    {% endfor %}
+
+    <table
+      cellspacing="0"
+      cellpadding="0"
+      border="0"
+      class="appl_footer"
+      width="638px"
+      style="
+        margin: 0 auto;
+        font-family: system, -apple-system, BlinkMacSystemFont,
+          -webkit-system-font, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        width: 100%;
+        background-color: #f2f2f2;
+      "
+    >
+      <tr>
+        <td
+          style="
+            font-family: system, -apple-system, BlinkMacSystemFont,
+              -webkit-system-font, 'Helvetica Neue', Helvetica, Arial,
+              sans-serif;
+          "
+        >
+          <table
+            class="appl_footer_inner appl_100"
+            align="center"
+            style="
+              width: 638px;
+              max-width: 638px;
+              margin: 0 auto;
+              padding-bottom: 40px;
+              background-color: #f2f2f2;
+            "
+          >
+            <tr>
+              <td class="appl_footer_container" style="padding: 20px 0">
+                <!-- duhfffffffffffffffsssfdsf -->
+                <table
+                  cellspacing="0"
+                  cellpadding="0"
+                  border="0"
+                  class="appl_footer_logo_wrap"
+                  style="margin: 0 auto 10px; max-width: 638px; width: 100%"
+                >
+                  <tr>
+                    <td class="appl_footer_logo">
+                      <img
+                        height="19"
+                        alt="Noiist"
+                        src="https://ik.imagekit.io/79uno1psenlz/noiist_footer_McCvFdYdv.png"
+                      />
+                    </td>
+                  </tr>
+                </table>
+                <table
+                  cellspacing="0"
+                  cellpadding="0"
+                  border="0"
+                  width="638px"
+                  align="center"
+                  style="margin: 0 auto"
+                  width="100%"
+                  class="appl_100"
+                >
+                  <tr>
+                    <td
+                      class="appl_iPadPadding_hr"
+                      align="center"
+                      style="
+                        border: 0;
+                        height: 1px;
+                        font-size: 10px;
+                        line-height: 1.5;
+                        color: #7f7f7f;
+                        -webkit-text-size-adjust: none;
+                      "
+                    >
+                      <img
+                        class="appl_hr appl_hr_mobile"
+                        border="0"
+                        width="100%"
+                        height="1"
+                        style="
+                          border: 0;
+                          height: 1px;
+                          margin: 0 auto 40px;
+                          display: block;
+                        "
+                        src="https://s1.mzstatic.com/eu/r30/Features/v4/7c/3f/7a/7c3f7a45-0200-dd01-80b6-8ca71e73d5fc/mza_5446604087650696575.png"
+                      />
+                      <p
+                        class="appl_copyright"
+                        style="
+                          text-align: center;
+                          margin-bottom: 25px;
+                          font-weight: 400;
+                        "
+                      >
+                        All rights reserved. Copyright &copy; 2021 Noiist
+                        <br />
+                        Harshit Singhai - Founder Noiist
+                      </p>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+
+    <!-- Close template HTML -->
+  </body>
+</html>
