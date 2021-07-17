@@ -1,5 +1,7 @@
 # Noiist
 
+![Noiist](https://i.ibb.co/9qNcSVV/noiist-landing-page.png)
+
 https://noiist.netlify.app/
 
 Get personalized spotify music recommendation directly to your inbox every day based on what you listened the previous day. Make your morning better with ☕ and Noiist.
